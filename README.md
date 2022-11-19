@@ -1,15 +1,14 @@
-# entropy
+# entro
 Originally designed to determine the entropy of a file, this Rust program counts the character frequency from `stdin`
 
 ## Installation
-`cargo install _____`
-<sub>Installation is a work-in-progress currently</sub>
+`cargo install entro`
 
 ## Usage
 ```
 Program to count character frequency from STDIN
 
-Usage: entropy.exe [OPTIONS]
+Usage: entro [OPTIONS]
 
 Options:
   -x, --hex              Print in hex
