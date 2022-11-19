@@ -63,8 +63,8 @@ dependencies = [
 ]
 
 [[package]]
-name = "entropy"
-version = "0.1.0"
+name = "entro"
+version = "0.0.1"
 dependencies = [
  "clap",
  "num",
