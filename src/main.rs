@@ -5,7 +5,7 @@ use num::clamp;
 
 #[derive(Parser)]
 #[command(
-    version = "0.0.1",
+    version = "0.0.2",
     author = "Mano Rajesh",
     about = "Program to count character frequency from STDIN"
 )]
