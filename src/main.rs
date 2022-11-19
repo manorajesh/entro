@@ -13,16 +13,22 @@ struct Args {
     /// Print in hex
     #[arg(short = 'x', long)]
     hex: bool,
+
+    /// Maximum number of characters to print
+    #[arg(short = 'l', long, default_value = "50")]
+    length: Option<usize>,
 }
 fn main() {
     let args = Args::parse();
+
+    let print_length = args.length.unwrap_or(50) as i32;
     let mut buffer = String::new();
     stdin().read_to_string(&mut buffer).unwrap();
     let freq = frequency(buffer.trim().to_string());
 
     let max = freq.values().max().unwrap();
     for (key, value) in freq.iter() {
-        let count = normalize(*value, *max, 50) as usize;
+        let count = normalize(*value, *max, print_length) as usize;
         if args.hex {
             print!("{:02x}: {}", *key as u8, "─".repeat(count));
         } else {
