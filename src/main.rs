@@ -3,7 +3,7 @@ use std::{io::{stdin, Read}, fs::File, collections::HashMap};
 
 #[derive(Parser)]
 #[command(
-    version = "0.1.1",
+    version = "0.1.2",
     author = "Mano Rajesh",
     about = "Program to count character frequency from FILE or STDIN"
 )]
